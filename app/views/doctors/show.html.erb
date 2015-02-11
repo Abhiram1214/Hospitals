@@ -1,0 +1,15 @@
+
+
+<ul>
+<% @doctor.patients.each do |patient| %>
+<li><%= link_to patient.name,patient%> is treated by <%=@doctor.name%> <%= link_to "remove", patient,method: :delete%> </li>
+<%end%>
+</ul>
+
+<%= link_to "Add Patient", patients_add_path %><br><br>
+
+<%= link_to "doctor's list", doctors_path %><br><br>
+
+<%= link_to "edit_doctor", edit_doctor_path %><br><br>
+
+<%= link_to "delete_doctor", @doctor, method: :delete %>

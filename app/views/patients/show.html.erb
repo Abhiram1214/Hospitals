@@ -1,0 +1,12 @@
+<%= @patient.name %> prescription :
+
+<ul>
+<% @patient.medications.each do |medication| %>
+<li><%= medication.name %><%= " " %><%= link_to "edit", edit_medication_path %></li>
+<%end%>
+</ul>
+
+<%= link_to "Add Medication", medications_patient_med_path(@patient.id) %>
+<!-- <a href="/medications/show?id=<%= @patient.id %>">dlfsj</a> -->
+
+<%="  "%><%= link_to "remove", @patient,method: :delete%>

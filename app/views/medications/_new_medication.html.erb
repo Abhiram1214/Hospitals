@@ -1,0 +1,15 @@
+<div class="container">
+   <div class="row form-group">
+      <%= form_for (@med) do |f| %>
+        	<div><%= f.label :name %></div>
+        <div class="row">
+    	     <div class="col-sm-5"><%= f.text_field :name,{:class=>"form-control"} %></div><br>
+        </div><br>
+    	 <%= f.hidden_field :@med.patient_id %>
+    	<div class="row">
+    	   <div><%= f.submit "Add" , {:class=>"btn btn-lg btn-ptimary"} %></div>
+    	 </div>
+
+    <% end %>
+  </div>
+</div>

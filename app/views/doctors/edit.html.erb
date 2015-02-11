@@ -1,0 +1,7 @@
+<h3>edit doctor</h3>
+
+<%= form_for(@doctor) do |f| %>
+<%= f.label :name %>
+<%= f.text_field:name %>
+<%= f.submit "update", class: "btn btn-large btn-default"%>
+<%end%>
